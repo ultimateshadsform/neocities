@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.8.1",
+    "@iconify/json": "^2.2.273",
     "sass-embedded": "^1.81.0",
     "tw-colors": "^3.3.2"
   }

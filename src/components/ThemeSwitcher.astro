@@ -1,0 +1,18 @@
+<button
+      id="theme-switcher"
+      class="fixed bottom-4 right-4 p-2.5 w-12 h-12 rounded-full bg-primary text-text hover:bg-accent transition-colors border-2 border-black flex items-center justify-center"
+      aria-label="Switch theme"
+    >
+    <span class="i-[lucide--palette] text-2xl"></span>
+  </button>
+</div>
+
+<script>
+  import { initTheme, cycleTheme } from '../ts/theme';
+  initTheme();
+
+  const themeSwitcher = document.getElementById('theme-switcher');
+  themeSwitcher?.addEventListener('click', () => {
+    cycleTheme();
+  });
+</script> 

@@ -3,3 +3,7 @@ body,
 #app {
   @apply w-full h-full;
 }
+
+body {
+  @apply text-text bg-gradient-to-b from-gradient-start to-gradient-end transition-colors;
+}
