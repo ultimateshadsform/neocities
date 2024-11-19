@@ -1,7 +1,13 @@
 {
-  "name": "next",
+  "name": "neocities",
+  "displayName": "Hedgehog Form",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://hedgehogform.neocities.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ultimateshadsform/neocities.git"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -19,6 +25,7 @@
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.8.1",
     "@iconify/json": "^2.2.273",
+    "@types/node": "^22.9.0",
     "sass-embedded": "^1.81.0",
     "tw-colors": "^3.3.2"
   }

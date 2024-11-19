@@ -4,9 +4,6 @@ import { createThemes } from 'tw-colors';
 
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  theme: {
-    extend: {},
-  },
   plugins: [
     dynamicIconsPlugin(),
     iconsPlugin(),
@@ -15,10 +12,10 @@ export default {
         text: '#FFFFFF',
         background: '#0A0A0A',
         primary: '#FF0000',
-        secondary: '#E6E6E6',
-        accent: '#DD0000',
+        secondary: '#808080',
+        accent: '#B22222',
         gradient: {
-          start: '#000000',
+          start: '#1A1A1A',
           end: '#FF0000',
         },
       },
@@ -53,6 +50,17 @@ export default {
         gradient: {
           start: '#7CB342',
           end: '#1B5E20',
+        },
+      },
+      tails: {
+        text: '#FFFFFF',
+        background: '#FF8C00',
+        primary: '#FFFFFF',
+        secondary: '#4169E1',
+        accent: '#FF4500',
+        gradient: {
+          start: '#FF8C00',
+          end: '#FFD700',
         },
       },
     }),

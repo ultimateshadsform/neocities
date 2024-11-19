@@ -1,11 +1,16 @@
-<button
-      id="theme-switcher"
-      class="fixed bottom-4 right-4 p-2.5 w-12 h-12 rounded-full bg-primary text-text hover:bg-accent transition-colors border-2 border-black flex items-center justify-center"
-      aria-label="Switch theme"
-    >
-    <span class="i-[lucide--palette] text-2xl"></span>
-  </button>
-</div>
+---
+import Button from './Button.astro';
+import Icon from './Icon.astro';
+---
+
+<Button
+  id="theme-switcher"
+  class="fixed bottom-4 right-4 w-12 h-12 rounded-full p-2.5 bg-background"
+  aria-label="Switch theme"
+  variant="icon"
+>
+  <Icon icon="i-[lucide--palette]" />
+</Button>
 
 <script>
   import { initTheme, cycleTheme } from '../ts/theme';
@@ -15,4 +20,4 @@
   themeSwitcher?.addEventListener('click', () => {
     cycleTheme();
   });
-</script> 
+</script>

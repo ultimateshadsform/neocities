@@ -1,0 +1,28 @@
+---
+import Button from './Button.astro';
+const appName = __APP_NAME__;
+
+const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' }
+];
+---
+
+<nav class="bg-gradient-to-r from-gradient-start to-gradient-end text-text p-4 w-full">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="text-xl font-bold">{appName}</div>
+        <ul class="flex space-x-6">
+            {navItems.map(({ href, label }) => (
+                <li>
+                    <Button 
+                        href={href} 
+                        class="!bg-transparent !px-2 !py-1"
+                    >
+                        {label}
+                    </Button>
+                </li>
+            ))}
+        </ul>
+    </div>
+</nav> 

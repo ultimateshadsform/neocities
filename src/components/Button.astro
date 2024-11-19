@@ -1,0 +1,46 @@
+---
+type HTMLAttributes = astroHTML.JSX.HTMLAttributes;
+
+interface Props extends HTMLAttributes {
+  variant?: 'primary' | 'accent' | 'icon';
+  href?: string;
+  class?: string;
+}
+
+const {
+  variant = 'primary',
+  href,
+  class: className = '',
+  ...rest
+} = Astro.props;
+
+const baseStyles =
+  'flex items-center justify-center text-text rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100';
+const variantStyles = {
+  primary:
+    'bg-primary text-text hover:bg-primary/90 focus:ring-primary/50 px-6 py-2',
+  accent:
+    'bg-accent text-text hover:bg-accent/90 focus:ring-accent/50 px-6 py-2',
+  icon: 'p-2',
+};
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      class:list={[baseStyles, variantStyles[variant], className]}
+      {...rest}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      type="button"
+      class:list={[baseStyles, variantStyles[variant], className]}
+      {...rest}
+    >
+      <slot />
+    </button>
+  )
+}

@@ -1,4 +1,9 @@
-export type Theme = 'shadow' | 'sonic-classic' | 'sonic-modern' | 'green-hill';
+export type Theme =
+  | 'shadow'
+  | 'sonic-classic'
+  | 'sonic-modern'
+  | 'green-hill'
+  | 'tails';
 
 const DEFAULT_THEME: Theme = 'shadow';
 
@@ -7,6 +12,7 @@ export const themes: Theme[] = [
   'sonic-classic',
   'sonic-modern',
   'green-hill',
+  'tails',
 ];
 
 export function setTheme(theme: Theme) {
